@@ -1986,6 +1986,12 @@ input, select, textarea {
 
 /* Wrappers */
 
+	.exploration-wrapper {
+		background-image: url("images/bg.png");
+		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		padding: 8em 5em 8em 5em;
+	}
+
 	.wrapper {
 		background-image: url("images/bg.png");
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
@@ -2442,4 +2448,27 @@ input, select, textarea {
 						margin-top: 0;
 					}
 
+	}
+
+	/* Code snippets */
+	.image-container {
+		text-align: center;
+	}
+	.image-container .code-snippets {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+	}
+	.image-container .plot-snippets {
+		margin-top: 3em;
+		width: 80%;
+	}
+
+	.image-container .preprocessing-code {
+		width: 80%;
+	}
+
+	.parent-sections {
+		padding-left: 2%;
 	}
