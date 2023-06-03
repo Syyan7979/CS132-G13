@@ -12,8 +12,7 @@ openai.api_key = env_vars['OPEN_AI_KEY']
 openai.organization = env_vars['OPEN_AI_ORG']
 
 # Set the query string
-query = "'President Noynoy Aquino' OR 'Noynoy Aquino' OR 'Senador Trillanes' OR 'Senator Trillanes' AND (('selling Scarborough Shoal' OR 'Scarborough Shoal') AND ('fake' OR 'false' OR 'hoax' OR 'disinformation' OR 'groundless')) until:2022-12-31 since:2016-01-01"
-
+query = "President Noynoy Aquino selling Scarborough shoal is still unconfirmed"
 
 tweets = []
 max_results = 150
@@ -81,24 +80,5 @@ df = pd.DataFrame(
     ]
 )
 
-# open excel file
-excel_file = pd.ExcelFile('Dataset - Group 13.xlsx')
-
-# Load the existing sheets into a dictionary of DataFrames
-sheets_dict = {}
-for sheet_name in excel_file.sheet_names:
-    sheets_dict[sheet_name] = excel_file.parse(sheet_name)
-
-# add new sheet to the dictionary
-sheets_dict['Factual Tweets'] = df
-
-# Create a new Excel writer object
-writer = pd.ExcelWriter('Dataset - Group 13.xlsx', engine='xlsxwriter')
-
-# Write each DataFrame to a sheet in the Excel file
-for sheet_name, df in sheets_dict.items():
-    df.to_excel(writer, sheet_name=sheet_name, index=False)
-
-# Save the changes and close the Excel writer
-writer.save()
-writer.close()
+# Save the dataframe as a CSV file
+df.to_csv("unvalidated_factual_tweets.csv", index=False)
