@@ -124,6 +124,8 @@ ul {
   background-color: #f8f8f8;
   padding: 10px;
   margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .output-heading {
@@ -2610,15 +2612,15 @@ body > article {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 45%;
 }
 .image-container .plot-snippets {
   margin-top: 3em;
-  width: 80%;
+  width: 60%;
 }
 
 .image-container .preprocessing-code {
-  width: 80%;
+  width: 45%;
 }
 
 .parent-sections {
@@ -2663,7 +2665,7 @@ body > article {
 
 .content {
   display: none;
-  padding: 10px;
+  padding: 40px 80px;
   margin-top: 0px;
   background-color: #fff;
   border: 1px solid #ccc;
